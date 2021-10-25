@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <OB.OverloadSetting>Nutrition overload</OB.OverloadSetting>
+  <OB.AdditionalNutrition>Additional nutrition</OB.AdditionalNutrition>
+  <OB.CurrentCycleAcceleration>Current cycle acceleration</OB.CurrentCycleAcceleration>
+  <OB.OSTooltip>Target cycle acceleration: {0}&#10;&#10;Click to modify.&#10;Use mouse scroll to micro adjustment.</OB.OSTooltip>
+</LanguageData>
