@@ -1,0 +1,5 @@
+Version 1.0.0.1
+ - Fixed cycle acceleration factor was set to 0 after the save loaded.
+
+Version 1.0.0.0
+ - Initial release.

@@ -50,7 +50,7 @@ namespace BiosculpterAcceleration
 
         [HarmonyPatch("LiquifyNutrition")]
         [HarmonyPrefix]
-        public static bool LiquifyNutrition(CompBiosculpterPod __instance, ThingOwner ___innerContainer, ref float ___liquifiedNutrition)
+        public static bool LiquifyNutrition(CompBiosculpterPod __instance, ThingOwner ___innerContainer, ref float ___liquifiedNutrition, float ___currentCycleTicksRemaining)
         {
             CompBiosculpterOverload comp = __instance.parent.TryGetComp<CompBiosculpterOverload>();
             if (comp != null)
@@ -60,11 +60,12 @@ namespace BiosculpterAcceleration
                     float num = thing.GetStatValue(StatDefOf.Nutrition, true) * thing.stackCount;
                     if (num > 0f && !(thing is Pawn))
                     {
+                        
                         ___liquifiedNutrition += num;
                         thing.Destroy(DestroyMode.Vanish);
                     }
                 }
-                comp.CycleFactor = ___liquifiedNutrition / NutritionRequired;
+                if (___currentCycleTicksRemaining == 0) comp.CycleFactor = ___liquifiedNutrition / NutritionRequired;
                 return false;
             }
 

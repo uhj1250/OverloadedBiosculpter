@@ -33,7 +33,7 @@ namespace BiosculpterAcceleration
         {
             get
             {
-                return cyclefactor;
+                return Mathf.Max(1.0f,cyclefactor);
             }
             set
             {
@@ -131,8 +131,11 @@ namespace BiosculpterAcceleration
                 else if (Event.current.type == EventType.ScrollWheel)
                 {
                     float delta = Input.mouseScrollDelta.y;
-                    if (delta > 0) val = Mathf.Clamp(val + 0.01f, min, max);
-                    else if (delta < 0) val = Mathf.Clamp(val - 0.01f, min, max);
+                    float adjust = 0.01f;
+                    if (Input.GetKey(KeyCode.LeftShift)) adjust = 0.5f;
+                    else if (Input.GetKey(KeyCode.LeftControl)) adjust = 0.05f;
+                    if (delta > 0) val = Mathf.Clamp(val + adjust, min, max);
+                    else if (delta < 0) val = Mathf.Clamp(val - adjust, min, max);
                     Event.current.Use();
                 }
             }
