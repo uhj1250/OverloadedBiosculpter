@@ -79,7 +79,7 @@ namespace BiosculpterAcceleration
         {
             this.parent = parent;
             this.compbiopod = parent.parent.GetComp<CompBiosculpterPod>();
-            this.order = -100;
+            this.Order = -100;
         }
 
 
