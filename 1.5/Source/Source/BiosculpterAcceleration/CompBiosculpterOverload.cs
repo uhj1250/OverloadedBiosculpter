@@ -97,7 +97,7 @@ namespace BiosculpterAcceleration
             if (other is Gizmo_BioOverloadConfig)
             {
                 Gizmo_BioOverloadConfig o = other as Gizmo_BioOverloadConfig;
-                o.AddSelected(parent);
+                this.AddSelected(o.parent);
             }
         }
 
@@ -126,8 +126,13 @@ namespace BiosculpterAcceleration
             Widgets.Label(row3, String.Format(Keyed.CurrentCycleAcceleration + ": {0:P2} ", parent.CycleFactor));
             Text.Font = GameFont.Small;
             string label = String.Format("{0:P0}", parent.LoadMultiplier);
-            parent.LoadMultiplier = DrawAdjustableBar(row4, parent.LoadMultiplier, parent.CycleFactor, 1.0f, 20f, DarkGreen, DarkYellow, Color.black, label, Keyed.OSTooltip(label));
-            
+            var value = DrawAdjustableBar(row4, parent.LoadMultiplier, parent.CycleFactor, 1.0f, 20f, DarkGreen, DarkYellow, Color.black, label, Keyed.OSTooltip(label));
+            parent.LoadMultiplier = value;
+            if (!selected.NullOrEmpty())
+            {
+                for (int i = 0; i < selected.Count; i++) selected[i].LoadMultiplier = value;
+            }
+
             
             return new GizmoResult(GizmoState.Clear);
         }
