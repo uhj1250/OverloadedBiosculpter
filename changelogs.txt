@@ -1,3 +1,6 @@
+Version 1.0.0.4
+ - Wrong assembly files fix
+
 Version 1.0.0.3
  - 1.5 support
  - Some QOL patch
