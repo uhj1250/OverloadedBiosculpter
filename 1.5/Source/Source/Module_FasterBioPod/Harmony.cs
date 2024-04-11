@@ -23,8 +23,8 @@ namespace BiosculpterAcceleration.Module_FasterBioPod
     [HarmonyPatch(typeof(Patch_CompBiosculpterPod))]
     public static class Patch_Patch_CompBiosculpterPod
     {
-        public static FasterBiosculpterPod_Settings settingcache = LoadedModManager.GetMod<FasterBiosculpterPod_Mod>().GetSettings<FasterBiosculpterPod_Settings>();
-
+        public static Settings settingcache = LoadedModManager.GetMod<FasterBiosculpterPod.FasterBiosculpterPod>().GetSettings<Settings>();
+        
 
         [HarmonyPatch("get_NutritionRequired")]
         [HarmonyPostfix]

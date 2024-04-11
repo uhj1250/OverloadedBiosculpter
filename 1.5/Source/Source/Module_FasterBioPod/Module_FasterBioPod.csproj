@@ -39,8 +39,10 @@
       <HintPath>..\..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="FasterBiosculpterPod">
-      <HintPath>..\..\..\..\..\..\..\..\workshop\content\294100\2576257954\1.4\Assemblies\FasterBiosculpterPod.dll</HintPath>
+    <Reference Include="FasterBiosculpterPod, Version=2.9.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\workshop\content\294100\2576257954\1.5\Assemblies\FasterBiosculpterPod.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

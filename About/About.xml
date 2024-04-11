@@ -23,6 +23,6 @@
 		<li>Ludeon.RimWorld.Ideology</li>
 		<li>brrainz.harmony</li>
 	</loadAfter>
-	<packageId>O.olbio</packageId>
+	<packageId>O.olbio.tmp</packageId>
 	<description>Accelerates biosculpter with more nutritions.</description>
 </ModMetaData>
