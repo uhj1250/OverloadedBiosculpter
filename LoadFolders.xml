@@ -12,4 +12,8 @@
 		<li>1.5</li>
 		<li IfModActive="Inglix.FasterBiosculptingPod">1.5/Module_FasterBioPod</li>
 	</v1.5>
+	<v1.6>
+		<li>1.6</li>
+		<li IfModActive="Inglix.FasterBiosculptingPod">1.6/Module_FasterBioPod</li>
+	</v1.6>
 </loadFolders>
